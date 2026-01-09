@@ -81,22 +81,19 @@ O Shadow Portal é modular. Você pode alterar os dados solicitados (ex: pedir C
 ### Passo 1: Alterar o HTML (`index.html`)
 Mude o atributo `name` no input que deseja alterar.
 
-```html
-<input type="text" name="setor" placeholder="Seu Setor">
+`<input type="text" name="setor" placeholder="Seu Setor">`
 
-<input type="text" name="cpf" placeholder="Seu CPF">
+`<input type="text" name="cpf" placeholder="Seu CPF">`
 
 Passo 2: Alterar o Firmware (.ino)
 No código Arduino, localize a função configurarRotas() e ajuste a leitura e a gravação:
 
-C++
+`// 1. Recebendo a nova variável (O texto laranja deve ser igual ao 'name' do HTML)
+String cpf = server.arg("cpf");` 
 
-// 1. Recebendo a nova variável (O texto laranja deve ser igual ao 'name' do HTML)
-String cpf = server.arg("cpf"); 
-
-// 2. Salvando no arquivo
+`// 2. Salvando no arquivo
 dataFile.println(cpf);
-Nota: Sempre que alterar o atributo name no HTML, é obrigatório recompilar e reenviar o código para a ESP32.
+Nota: Sempre que alterar o atributo name no HTML, é obrigatório recompilar e reenviar o código para a ESP32.`
 
 Aviso Legal (Disclaimer)
 Este projeto foi desenvolvido estritamente para fins educacionais e acadêmicos.
@@ -107,11 +104,9 @@ Interceptar dados de terceiros sem consentimento;
 
 Atacar redes sem autorização expressa;
 
-Realizar fraudes;
-
-...é ilegal e viola leis de crimes cibernéticos (no Brasil, Lei 12.737/2012). O autor e a Solyd Offensive Security não se responsabilizam pelo mau uso desta ferramenta. Utilize apenas em ambientes controlados (laboratórios) ou em auditorias de Red Teaming contratadas.
+Realizar fraudes é ilegal e viola leis de crimes cibernéticos (no Brasil, Lei 12.737/2012). O autor e a Solyd Offensive Security não se responsabilizam pelo mau uso desta ferramenta. Utilize apenas em ambientes controlados (laboratórios) ou em auditorias de Red Teaming contratadas.
 
 📜 Licença
 Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
-Desenvolvido por [Seu Nome] - Projeto de Certificação SYH2.
+Desenvolvido por João Eduardo (Ap0ph1s) - Projeto de Certificação SYH2.
