@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhotoShare Login</title>
+    <style>
+        /* Reset e Fontes */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #fafafa; /* Fundo levemente cinza */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        /* Container Principal */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            width: 100%;
+            max-width: 935px;
+            padding: 30px 0;
+        }
+
+        /* Área do "Celular" (Esquerda) - Simulada com CSS */
+        .phone-mockup {
+            background-image: url('https://placehold.co/380x580/e1e1e1/white?text=Phone+Mockup'); /* Placeholder */
+            background-size: cover;
+            width: 380px;
+            height: 580px;
+            display: block; /* Visível em Desktop */
+        }
+
+        /* Coluna da Direita (Formulários) */
+        .right-column {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        /* Estilo genérico dos cartões brancos com borda */
+        .box {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 20px 40px;
+            text-align: center;
+            border-radius: 1px;
+        }
+
+        /* Logo (Texto simulando imagem) */
+        .logo {
+             font-family: 'Grand Hotel', cursive; 
+             font-size: 50px;
+             color: #262626;
+            margin: 20px 0 30px 0;
+            display: block;
+        }
+
+        /* Inputs */
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 9px 8px;
+            border: 1px solid #dbdbdb;
+            background-color: #fafafa;
+            border-radius: 3px;
+            font-size: 12px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #a8a8a8;
+        }
+
+        /* Botão de Login */
+        .btn-login {
+            width: 100%;
+            background-color: #0095f6; /* Azul característico */
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 7px;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+        }
+
+        .btn-login:disabled {
+            background-color: #b2dffc;
+            cursor: default;
+        }
+
+        /* Divisor "OU" */
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .line {
+            flex: 1;
+            height: 1px;
+            background-color: #dbdbdb;
+        }
+
+        .or-text {
+            padding: 0 18px;
+            color: #8e8e8e;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Links secundários */
+        .facebook-login {
+            color: #385185;
+            font-weight: bold;
+            font-size: 14px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .forgot-pass {
+            font-size: 12px;
+            color: #00376b;
+            text-decoration: none;
+        }
+
+        /* Texto do segundo card */
+        .signup-text {
+            font-size: 14px;
+            color: #262626;
+        }
+
+        .signup-text a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Área de Download do App */
+        .get-app {
+            text-align: center;
+            padding: 10px;
+        }
+        .get-app p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+        .stores {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+        .store-btn {
+            background-color: #000; /* Placeholder para botões da loja */
+            color: white;
+            width: 136px;
+            height: 40px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 850px) {
+            .phone-mockup {
+                display: none; /* Some com o celular em telas menores */
+            }
+        }
+        
+        @media (max-width: 450px) {
+            .box {
+                background-color: transparent;
+                border: none; /* Remove bordas no mobile puro */
+            }
+            body {
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="phone-mockup"></div>
+
+        <div class="right-column">
+            
+            <div class="box">
+                <span class="logo">Instagram</span>
+                
+                <form>
+                    <div class="input-group">
+                        <input type="text" placeholder="Telefone, nome de usuário ou email" required>
+                        <input type="password" placeholder="Senha" required>
+                    </div>
+
+                    <button class="btn-login" type="button">Entrar</button>
+
+                    <div class="divider">
+                        <div class="line"></div>
+                        <div class="or-text">OU</div>
+                        <div class="line"></div>
+                    </div>
+
+                    <a href="#" class="facebook-login">Entrar com o Facebook</a>
+                    <a href="#" class="forgot-pass">Esqueceu a senha?</a>
+                </form>
+            </div>
+
+            <div class="box">
+                <p class="signup-text">
+                    Não tem uma conta? <a href="#">Cadastre-se</a>
+                </p>
+            </div>
+
+            <div class="get-app">
+                <p>Obtenha o aplicativo.</p>
+                <div class="stores">
+                    <div class="store-btn">Google Play</div>
+                    <div class="store-btn">App Store</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

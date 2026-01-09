@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Login - Prática</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Container Principal */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            max-width: 980px;
+            padding: 20px;
+        }
+
+        /* Lado Esquerdo (Texto) */
+        .left-content {
+            width: 50%;
+            padding-right: 32px;
+        }
+
+        .left-content h1 {
+            color: #1877f2; /* Azul característico */
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .left-content p {
+            font-size: 1.5rem;
+            color: #1c1e21;
+            line-height: 1.2;
+        }
+
+        /* Lado Direito (Card de Login) */
+        .right-content {
+            width: 400px;
+        }
+
+        .login-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+            font-size: 17px;
+            outline: none;
+        }
+
+        .login-card input:focus {
+            border-color: #1877f2;
+            box-shadow: 0 0 0 2px #e7f3ff;
+        }
+
+        .btn-login {
+            width: 100%;
+            background-color: #1877f2;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-login:hover {
+            background-color: #166fe5;
+        }
+
+        .forgot-password {
+            display: block;
+            margin-top: 16px;
+            color: #1877f2;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            border-bottom: 1px solid #dadde1;
+            margin: 20px 0;
+        }
+
+        .btn-create {
+            background-color: #42b72a;
+            color: white;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 6px;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-create:hover {
+            background-color: #36a420;
+        }
+
+        /* Responsividade para telas menores (Celulares) */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .left-content {
+                width: 100%;
+                padding-right: 0;
+                margin-bottom: 40px;
+            }
+
+            .left-content p {
+                font-size: 1.2rem;
+            }
+
+            .right-content {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="left-content">
+            <h1>facebook</h1>
+            <p>O facebook ajuda você a se conectar e compartilhar com as pessoas que fazem parte da sua vida.</p>
+        </div>
+
+        <div class="right-content">
+            <div class="login-card">
+                <form action="#" method="POST">
+                    <input type="text" placeholder="Email ou telefone" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit" class="btn-login">Entrar</button>
+                    <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                    
+                    <div class="divider"></div>
+                    
+                    <button type="button" class="btn-create">Criar nova conta</button>
+                </form>
+            </div>
+            <p style="margin-top: 20px; font-size: 14px;">
+                <strong>Criar uma Página</strong> para uma celebridade, banda ou empresa.
+            </p>
+        </div>
+    </div>
+
+</body>
+</html>
